@@ -20,11 +20,11 @@ TOTAL_FOLDER = os.path.join(OUTPUT_DIR, "total")  # 总文件夹
 # 源文件夹路径和目标文件夹路径
 SOURCE_FOLDER = r"E:\transform\tryfile"  # 源文件夹路径
 TARGET_FOLDERS = {
-    "港口": os.path.join(OUTPUT_DIR, "Gangkou"),
-    "海事": os.path.join(OUTPUT_DIR, "Haishi"),
-    "航道": os.path.join(OUTPUT_DIR, "Hangdao"),
-    "运政": os.path.join(OUTPUT_DIR, "Yunzheng"),
-    "区县指导": os.path.join(OUTPUT_DIR, "QUxianzhidao")
+    "33": os.path.join(OUTPUT_DIR, "33"),
+    "6": os.path.join(OUTPUT_DIR, "55"),
+    "2": os.path.join(OUTPUT_DIR, "66"),
+    "3": os.path.join(OUTPUT_DIR, "77"),
+    "1": os.path.join(OUTPUT_DIR, "888")
 }
 
 # 确保输出文件夹存在
@@ -87,7 +87,7 @@ def get_subfolder_name(file_path):
     """
     relative_path = os.path.relpath(os.path.dirname(file_path), SOURCE_FOLDER)
     if relative_path == ".":
-        return "区县指导"  # 默认分类到 "区县指导"
+        return "1"  # 默认分类到 "1"
 
     # 分割路径以获取所有子文件夹
     subfolders = relative_path.split(os.sep)
@@ -97,7 +97,7 @@ def get_subfolder_name(file_path):
             return folder
 
     # 如果没有找到匹配的分类，返回默认分类
-    return "区县指导"
+    return "1"
 
 # 文件处理逻辑
 def process_file(file_path, processed_hashes):
